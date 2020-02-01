@@ -15,7 +15,12 @@ public class CameraShake : MonoBehaviour
         
     }
 
-    public IEnumerator Shake(float duration, float magnitude)
+    public void Shake(float duration, float magnitude)
+    {
+        StartCoroutine(_Shake(duration, magnitude));
+    }
+
+    public IEnumerator _Shake(float duration, float magnitude)
     {
         var originalPosition = transform.localPosition;
         var elapsed = 0.0f;

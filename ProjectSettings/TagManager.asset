@@ -11,6 +11,7 @@ TagManager:
   - Spawner
   - Puzzle
   - MainMenu
+  - PostProcessing
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,8 @@ using UnityEngine;
 public class Director : MonoBehaviour
 {
     public StringUnityEvent SpawnEvent;
+    public GameObject Camera;
+    public GameObject PostProcessing;
 
     [ReadOnly]
     public GameObject[] Puzzles;
@@ -20,7 +22,7 @@ public class Director : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void SpawnPuzzle()
@@ -56,5 +58,10 @@ public class Director : MonoBehaviour
     private string PickRandPuzzle()
     {
         return Puzzles[Random.Range(0, Puzzles.Length)].name;
+    }
+
+    private void OnDestruction() {
+        Camera.GetComponent<CameraShake>().Shake(1f, 0.1f);
+        PostProcessing.GetComponent<PostProcessing>().ChromaticAberration();
     }
 }
