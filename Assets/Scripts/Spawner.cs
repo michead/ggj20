@@ -53,6 +53,7 @@ public class Spawner : MonoBehaviour
         }
 
         puzzlePosition /= (puzzleComp.Dimensions[0] * puzzleComp.Dimensions[1]);
+        puzzlePosition.y = -1;
         var puzzle = Instantiate(puzzleType, puzzlePosition, Quaternion.identity);
 
         OpenSliders();
