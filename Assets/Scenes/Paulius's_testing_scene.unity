@@ -647,6 +647,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246409, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 837166344033426965, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
         type: 3}
       propertyPath: m_IsKinematic
@@ -657,7 +662,8 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 96b60a0bc0e37b1469825373a7d5a5a0, type: 3}
 --- !u!1001 &5467364257204778999
 PrefabInstance:
