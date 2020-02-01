@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move_speed: 3
+  pausePrefab: {fileID: 0}
 --- !u!1001 &1066109970564226316
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -113,7 +114,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 398468069629074258, guid: f47f91754aafaf64fbcec30c0177477e, type: 3}
+    - {fileID: -374691097824760458, guid: f47f91754aafaf64fbcec30c0177477e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f47f91754aafaf64fbcec30c0177477e, type: 3}
 --- !u!4 &814080365670434396 stripped
 Transform:
@@ -188,7 +191,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 256772471912246407, guid: 96b60a0bc0e37b1469825373a7d5a5a0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 96b60a0bc0e37b1469825373a7d5a5a0, type: 3}
 --- !u!4 &1649343843269751696 stripped
 Transform:

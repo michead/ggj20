@@ -11,13 +11,19 @@ public class player_movement : MonoBehaviour {
     public player1 p1;
     public player2 p2;
 
+    private GameObject pgo1;
+    private GameObject pgo2;
+
     public PauseMenu pausePrefab;
 
     //public bool is_p1_solving, is_p2_solving = false;
     // Start is called before the first frame update
     void Start() {
-        rb1 = GameObject.Find("Player1").GetComponent<Rigidbody>();
-        rb2 = GameObject.Find("Player2").GetComponent<Rigidbody>();
+        pgo1 = GameObject.Find("Player1");
+        pgo2 = GameObject.Find("Player2");
+
+        rb1 = pgo1.GetComponent<Rigidbody>();
+        rb2 = pgo2.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -69,5 +75,8 @@ public class player_movement : MonoBehaviour {
             p2.X = Input.GetAxis("X_p1") > 0;
             p2.Y = Input.GetAxis("Y_p1") > 0;
         }
+
+        pgo1.GetComponentInChildren<Animator>().SetFloat("Speed", Mathf.Min(1, Mathf.Abs(rb1.velocity.magnitude)));
+        pgo2.GetComponentInChildren<Animator>().SetFloat("Speed", Mathf.Min(1, Mathf.Abs(rb2.velocity.magnitude)));
     }
 }
