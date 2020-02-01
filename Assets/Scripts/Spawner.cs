@@ -1,26 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Unity.Collections;
 using UnityEngine;
-using UnityEngine.Assertions;
-using UnityEngine.Events;
 
 public class Spawner : MonoBehaviour
 {
     [ReadOnly]
     public GameObject[] Tiles;
 
-    public UnityEvent SpawnEvent;
-
-    private int sideSize;
+    private const int xSideSize = 9;
+    private const int zSideSize = 5;
     private IList<GameObject> slidingTiles;
 
     // Start is called before the first frame update
     void Start()
     {
         InitializeTiles();
-        StartCoroutine("TestDriver");
     }
 
     // Update is called once per frame
@@ -33,29 +28,22 @@ public class Spawner : MonoBehaviour
     {
         Tiles = GameObject.FindGameObjectsWithTag("Tile");
 
-        // Check number of tiles is a power of 2.
-        var fSideSize = Mathf.Sqrt(Tiles.Length);
-        var iSideSize = Mathf.RoundToInt(fSideSize);
-        Assert.AreApproximatelyEqual(iSideSize, fSideSize, 0.1f);
-
-        sideSize = iSideSize;
-
         // Order tiles far -> near, left -> right.
-        Tiles = Tiles.OrderBy(t => t.transform.position.z * 10 + t.transform.position.x).ToArray();
+        Tiles = Tiles.OrderBy(t => -t.transform.position.z * 10 + t.transform.position.x).ToArray();
     }
 
-    void Spawn(int widthX, int widthZ)
+    public void Spawn(string tileId)
     {
-        // var randX = Random.Range(0, sideSize - tile.Dimensions[0]);
-        // var randZ = Random.Range(0, sideSize - tile.Dimensions[1]);
+        var puzzleType = Resources.Load($"Prefabs/{tileId}") as GameObject;
+        var puzzleComp = puzzleType.GetComponent<Puzzle>();
 
-        var randX = Random.Range(0, sideSize - widthX);
-        var randZ = Random.Range(0, sideSize - widthZ);
+        var randX = Random.Range(0, xSideSize - puzzleComp.Dimensions[0]);
+        var randZ = Random.Range(0, zSideSize - puzzleComp.Dimensions[1] - 1);
 
         slidingTiles = new List<GameObject>();
-        for (var x = 0; x < widthX; x++)
+        for (var x = 0; x < puzzleComp.Dimensions[0]; x++)
         {
-            for (var z = 0; z < widthZ; z++)
+            for (var z = 0; z < puzzleComp.Dimensions[1]; z++)
             {
                 var t = GetTileAt(randX + x, randZ + z);
                 slidingTiles.Add(t);
@@ -63,11 +51,11 @@ public class Spawner : MonoBehaviour
         }
 
         OpenSliders();
-        Invoke("CloseSliders", 3.0f);
     }
 
     private void OpenSliders()
     {
+        // TODO: Open animation
         foreach (var st in slidingTiles)
         {
             st.SetActive(false);
@@ -76,6 +64,7 @@ public class Spawner : MonoBehaviour
 
     private void CloseSliders()
     {
+        // TODO: Close animation
         foreach (var st in slidingTiles)
         {
             st.SetActive(true);
@@ -84,23 +73,11 @@ public class Spawner : MonoBehaviour
 
     private GameObject GetTileAt(int x, int z)
     {
-        return Tiles[x + sideSize * z];
+        return Tiles[5 + x + xSideSize * z];
     }
 
-    public IEnumerator TestDriver()
+    public void OnPuzzleSolved()
     {
-        var i = 0;
-        while (true)
-        {
-            if (i % 2 == 0) {
-                Spawn(1, 1);
-            } else {
-                Spawn(2, 2);
-            }
-
-            i++;
-
-            yield return new WaitForSeconds(5.5f);
-        }
+        CloseSliders();
     }
 }

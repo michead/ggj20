@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.Assertions;
+using UnityEngine.Events;
 
-public class Tile : MonoBehaviour
+public class Puzzle : MonoBehaviour
 {
+    public UnityEvent PuzzleSolvedEvent;
+
     public int[] Dimensions = new int[2];
 
     // Start is called before the first frame update
@@ -20,5 +23,10 @@ public class Tile : MonoBehaviour
     void OnValidate()
     {
         Assert.IsTrue(Dimensions.Length == 2);
+    }
+
+    void Solve()
+    {
+        PuzzleSolvedEvent.Invoke();
     }
 }
