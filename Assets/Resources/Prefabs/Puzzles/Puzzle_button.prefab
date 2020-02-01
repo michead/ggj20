@@ -243,7 +243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b47d59af7e72a4c8b7ed7794b0cc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decrease_pressure_by: 0.25
+  decrease_pressure_by: 0.08
 --- !u!114 &-1026272364190338385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -488,6 +488,7 @@ GameObject:
   - component: {fileID: 2967810216833877270}
   - component: {fileID: 6333410774853398857}
   - component: {fileID: 2178618004876715737}
+  - component: {fileID: 3449844116226189046}
   m_Layer: 0
   m_Name: Cylinder.022
   m_TagString: Untagged
@@ -556,6 +557,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!95 &3449844116226189046
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1777831545954632817}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 42c229e8232eabf41a7621db4b7de388, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1825833228333061208
 GameObject:
   m_ObjectHideFlags: 0
@@ -1055,14 +1075,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4339658358889857381}
-  m_LocalRotation: {x: 0, y: 0, z: 0.65460885, w: 0.75596774}
+  m_LocalRotation: {x: 0, y: 0, z: 0.6427876, w: 0.7660445}
   m_LocalPosition: {x: -0.0218, y: 0.639, z: 0.1144}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7015824371684573283}
   m_Father: {fileID: 4446539954479050670}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 81.78}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 80}
 --- !u!1 &4619132137555657185
 GameObject:
   m_ObjectHideFlags: 0

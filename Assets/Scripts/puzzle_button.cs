@@ -7,17 +7,35 @@ public class puzzle_button : MonoBehaviour
     player_movement pm;
     Puzzle puzzle;
 
+    Animator animator;
+
     float pressure;
     bool force_tapping1, force_tapping2 = false;
 
     [SerializeField]
     float decrease_pressure_by;
 
+    // Animation stuff
+    Transform needle;
+
+
     // Start is called before the first frame update
     void Start()
     {
         pm = GameObject.Find("InputManager").GetComponent<player_movement>();
         puzzle = GetComponent<Puzzle>();
+        //animator = GetComponent<Animator>();
+        foreach (Transform t in transform)
+        {
+            if (t.gameObject.name == "Needle")
+            {
+                needle = t;
+            }
+            if (t.gameObject.name == "Cylinder.022")
+            {
+                animator = t.GetComponent<Animator>();
+            }
+        }
         pressure = 0.5f;
     }
 
@@ -39,6 +57,7 @@ public class puzzle_button : MonoBehaviour
             {
                 force_tapping1 = true;
                 pressure = Mathf.Clamp01(pressure - decrease_pressure_by);
+                animator.Play("Button_press");
             }
             else if (!pm.p1.A)
             {
@@ -57,6 +76,7 @@ public class puzzle_button : MonoBehaviour
             {
                 force_tapping2 = true;
                 pressure = Mathf.Clamp01(pressure - decrease_pressure_by);
+                animator.Play("Button_press");
             }
             else if (!pm.p1.A)
             {
@@ -78,5 +98,15 @@ public class puzzle_button : MonoBehaviour
             }
             puzzle.Solve();
         }
+    }
+
+    private void LateUpdate()
+    {
+        // Needle jitter 
+        // max 13 min 145
+        needle.rotation = Quaternion.Euler(0.0f, 0.0f, 145.0f - (132.0f * pressure));
+        // Hax
+        if (transform.position.y > 0.0f)
+            transform.position = new Vector3(transform.position.x, 0.0f, transform.position.z);
     }
 }
