@@ -16,7 +16,7 @@ public class puzzle_button : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pm = GameObject.Find("Player_controller").GetComponent<player_movement>();
+        pm = GameObject.Find("InputManager").GetComponent<player_movement>();
         puzzle = GetComponent<Puzzle>();
         pressure = 0.5f;
     }

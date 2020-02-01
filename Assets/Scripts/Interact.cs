@@ -10,7 +10,7 @@ public class Interact : MonoBehaviour
     void Start()
     {
         par = gameObject.GetComponentInParent<Puzzle>();
-        pm = GameObject.Find("Player_controller").GetComponent<player_movement>();
+        pm = GameObject.Find("InputManager").GetComponent<player_movement>();
     }
 
     private void OnTriggerStay(Collider other)
