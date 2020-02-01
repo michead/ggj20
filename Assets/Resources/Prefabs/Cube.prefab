@@ -106,4 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dimensions: 0100000002000000
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  Dimensions: 0100000001000000

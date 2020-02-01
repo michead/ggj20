@@ -40,6 +40,7 @@ public class Spawner : MonoBehaviour
         var randX = Random.Range(0, xSideSize - puzzleComp.Dimensions[0]);
         var randZ = Random.Range(0, zSideSize - puzzleComp.Dimensions[1] - 1);
 
+        var puzzlePosition = Vector3.zero;
         slidingTiles = new List<GameObject>();
         for (var x = 0; x < puzzleComp.Dimensions[0]; x++)
         {
@@ -47,8 +48,12 @@ public class Spawner : MonoBehaviour
             {
                 var t = GetTileAt(randX + x, randZ + z);
                 slidingTiles.Add(t);
+                puzzlePosition += t.transform.position;
             }
         }
+
+        puzzlePosition /= (puzzleComp.Dimensions[0] * puzzleComp.Dimensions[1]);
+        var puzzle = Instantiate(puzzleType, puzzlePosition, Quaternion.identity);
 
         OpenSliders();
     }
@@ -58,7 +63,7 @@ public class Spawner : MonoBehaviour
         // TODO: Open animation
         foreach (var st in slidingTiles)
         {
-            st.SetActive(false);
+            st.GetComponent<Tile>().Open();
         }
     }
 
@@ -67,7 +72,7 @@ public class Spawner : MonoBehaviour
         // TODO: Close animation
         foreach (var st in slidingTiles)
         {
-            st.SetActive(true);
+            st.GetComponent<Tile>().Close();
         }
     }
 
