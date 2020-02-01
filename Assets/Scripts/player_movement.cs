@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
-public class player_movement : MonoBehaviour
-{
+public class player_movement : MonoBehaviour {
     [SerializeField]
     float move_speed;
     Rigidbody rb1, rb2;
@@ -12,21 +11,25 @@ public class player_movement : MonoBehaviour
     public player1 p1;
     public player2 p2;
 
+    public PauseMenu pausePrefab;
+
     //public bool is_p1_solving, is_p2_solving = false;
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start() {
         rb1 = GameObject.Find("Player1").GetComponent<Rigidbody>();
         rb2 = GameObject.Find("Player2").GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update() {
+        if (Input.GetAxis("Pause") > 0 && Time.timeScale != 0) {
+            //pause the game
+            GameObject.Instantiate(pausePrefab);
+        }
+
         // Player 1
         // Movement
-        if (!p1.is_solving)
-        {
+        if (!p1.is_solving) {
             vel1 = new Vector3(0.0f, 0.0f, 0.0f);
             vel1 += new Vector3(1.0f, 0.0f, 0.0f) * Input.GetAxis("Horizontal_p1") * move_speed;
             vel1 += new Vector3(0.0f, 0.0f, 1.0f) * Input.GetAxis("Vertical_p1") * move_speed;
@@ -34,8 +37,7 @@ public class player_movement : MonoBehaviour
             p1.A = Input.GetAxis("A_p1") > 0;
         }
         // Puzzles
-        else
-        {
+        else {
             rb1.velocity = new Vector3(0.0f, 0.0f, 0.0f);
             p1.left = Input.GetAxis("Horizontal_p1") < 0;
             p1.right = Input.GetAxis("Horizontal_p1") > 0;
@@ -48,8 +50,7 @@ public class player_movement : MonoBehaviour
         }
         // Player 2
         // Movement
-        if (!p2.is_solving)
-        {
+        if (!p2.is_solving) {
             vel2 = new Vector3(0.0f, 0.0f, 0.0f);
             vel2 += new Vector3(1.0f, 0.0f, 0.0f) * Input.GetAxis("Horizontal_p2") * move_speed;
             vel2 += new Vector3(0.0f, 0.0f, 1.0f) * Input.GetAxis("Vertical_p2") * move_speed;
@@ -57,8 +58,7 @@ public class player_movement : MonoBehaviour
             p2.A = Input.GetAxis("A_p2") > 0;
         }
         // Puzzles
-        else
-        {
+        else {
             rb2.velocity = new Vector3(0.0f, 0.0f, 0.0f);
             p2.left = Input.GetAxis("Horizontal_p1") < 0;
             p2.right = Input.GetAxis("Horizontal_p1") > 0;
