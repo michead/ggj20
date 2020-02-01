@@ -76,7 +76,20 @@ public class player_movement : MonoBehaviour {
             p2.Y = Input.GetAxis("Y_p1") > 0;
         }
 
+        if (rb1.velocity.magnitude > 0) {
+            var rot1 = pgo1.transform.rotation;
+            var y = Quaternion.LookRotation(rb1.velocity).y;
+            pgo1.transform.rotation = new Quaternion(rot1.x, y, rot1.z, rot1.w);
+        }
+
         pgo1.GetComponentInChildren<Animator>().SetFloat("Speed", Mathf.Min(1, Mathf.Abs(rb1.velocity.magnitude)));
+
+        if (rb2.velocity.magnitude > 0) {
+            var rot2 = pgo2.transform.rotation;
+            var y = Quaternion.LookRotation(rb1.velocity).y;
+            pgo2.transform.rotation = new Quaternion(rot2.x, y, rot2.z, rot2.w);
+        }
+
         pgo2.GetComponentInChildren<Animator>().SetFloat("Speed", Mathf.Min(1, Mathf.Abs(rb2.velocity.magnitude)));
     }
 }
