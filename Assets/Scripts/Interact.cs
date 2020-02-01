@@ -13,7 +13,7 @@ public class Interact : MonoBehaviour
         pm = GameObject.Find("InputManager").GetComponent<player_movement>();
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerStay (Collider other)
     {
         if (other.gameObject.name == "Player1")
         {

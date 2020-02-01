@@ -33,6 +33,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
+<<<<<<< HEAD
     clipAnimations:
     - serializedVersion: 16
       name: Run
@@ -63,6 +64,9 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
+=======
+    clipAnimations: []
+>>>>>>> b074c5cab36a9d88c246bf4a75c45a8642ddce95
     isReadable: 0
   meshes:
     lODScreenPercentages: []
