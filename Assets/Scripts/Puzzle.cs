@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Events;
 
@@ -8,6 +9,7 @@ public class Puzzle : MonoBehaviour
     public int[] Dimensions = new int[2];
     public float ShowTimeout = 0.5f;
     public float HideTimeout = 1.0f;
+    public Material OutlineMaterial;
 
     private Animator animator;
     private Director director;
@@ -32,7 +34,7 @@ public class Puzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        UpdateOutline();
     }
 
     void OnValidate()
@@ -66,5 +68,25 @@ public class Puzzle : MonoBehaviour
     {
         director.OnPuzzleSolved();
         spawner.OnPuzzleSolved();
+    }
+
+    private void UpdateOutline()
+    {
+        var materials = GetComponent<MeshRenderer>().materials;
+
+        if (p1_locked || p2_locked)
+        {
+            // Outline puzzle if it's being interacted with.
+            if (!materials.Any(m => m.name == OutlineMaterial.name)) {
+                materials[1] = OutlineMaterial;
+                GetComponent<MeshRenderer>().materials = materials;
+            }
+        }
+        else
+        {
+            // Remove outline if puzzle is not locked anymore.
+            // This assumes the materials array has been preset to contain 2 elements.
+            materials[1] = null;
+        }
     }
 }

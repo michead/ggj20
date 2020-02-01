@@ -64,6 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -128,6 +129,8 @@ MonoBehaviour:
   Dimensions: 0100000001000000
   ShowTimeout: 0.5
   HideTimeout: 1
+  OutlineMaterial: {fileID: 2100000, guid: 83eb809dd26e146b78751fce5cb6b2fc, type: 2}
+  isSolved: 0
   p1_locked: 0
   p2_locked: 0
 --- !u!95 &-8642328593578157334
