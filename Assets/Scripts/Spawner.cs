@@ -40,11 +40,11 @@ public class Spawner : MonoBehaviour
 
     public void Spawn(string tileId)
     {
-        var puzzleType = Resources.Load($"Prefabs/{tileId}") as GameObject;
+        var puzzleType = Resources.Load($"Prefabs/Puzzles/{tileId}") as GameObject;
         var puzzleComp = puzzleType.GetComponent<Puzzle>();
 
         var randX = Random.Range(0, xSideSize - puzzleComp.Dimensions[0]);
-        var randZ = Random.Range(0, zSideSize - puzzleComp.Dimensions[1] - 1);
+        var randZ = Random.Range(0, zSideSize - puzzleComp.Dimensions[1]);
 
         var puzzlePosition = Vector3.zero;
         slidingTiles = new List<GameObject>();

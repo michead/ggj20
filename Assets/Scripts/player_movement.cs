@@ -40,6 +40,9 @@ public class player_movement : MonoBehaviour {
             vel1 += new Vector3(1.0f, 0.0f, 0.0f) * Input.GetAxis("Horizontal_p1") * move_speed;
             vel1 += new Vector3(0.0f, 0.0f, 1.0f) * Input.GetAxis("Vertical_p1") * move_speed;
             rb1.velocity = vel1;
+            if (rb1.velocity.magnitude < 0.2f) {
+                rb1.velocity = Vector3.zero;
+            }
             p1.A = Input.GetAxis("A_p1") > 0;
         }
         // Puzzles
@@ -61,6 +64,9 @@ public class player_movement : MonoBehaviour {
             vel2 += new Vector3(1.0f, 0.0f, 0.0f) * Input.GetAxis("Horizontal_p2") * move_speed;
             vel2 += new Vector3(0.0f, 0.0f, 1.0f) * Input.GetAxis("Vertical_p2") * move_speed;
             rb2.velocity = vel2;
+            if (rb2.velocity.magnitude < 0.2f) {
+                rb2.velocity = Vector3.zero;
+            }
             p2.A = Input.GetAxis("A_p2") > 0;
         }
         // Puzzles
@@ -83,6 +89,7 @@ public class player_movement : MonoBehaviour {
         }
 
         pgo1.GetComponentInChildren<Animator>().SetFloat("Speed", Mathf.Min(1, Mathf.Abs(rb1.velocity.magnitude)));
+        Debug.DrawLine(pgo1.transform.position, pgo1.transform.position + rb1.velocity.normalized);
 
         if (rb2.velocity.magnitude > 0) {
             var rot2 = pgo2.transform.rotation;
@@ -91,5 +98,6 @@ public class player_movement : MonoBehaviour {
         }
 
         pgo2.GetComponentInChildren<Animator>().SetFloat("Speed", Mathf.Min(1, Mathf.Abs(rb2.velocity.magnitude)));
+        Debug.DrawLine(pgo2.transform.position, pgo2.transform.position + rb2.velocity.normalized);
     }
 }

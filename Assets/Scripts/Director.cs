@@ -1,13 +1,19 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
+﻿using System.Collections.Generic;
+using Unity.Collections;
+using UnityEditor;
+using UnityEngine;
 
 public class Director : MonoBehaviour
 {
     public StringUnityEvent SpawnEvent;
 
+    [ReadOnly]
+    public GameObject[] Puzzles;
+
     // Start is called before the first frame update
     void Start()
     {
+        CollectAllPuzzles();
         Invoke("SpawnPuzzle", 1.0f);
     }
 
@@ -19,11 +25,36 @@ public class Director : MonoBehaviour
 
     public void SpawnPuzzle()
     {
-        SpawnEvent.Invoke("Puzzle_button");
+        var puzzleName = PickRandPuzzle();
+        SpawnEvent.Invoke(puzzleName);
     }
 
     public void OnPuzzleSolved()
     {
         Invoke("SpawnPuzzle", 1.0f);
+    }
+
+    private void CollectAllPuzzles()
+    {
+        string[] guids = AssetDatabase.FindAssets(null, new[] { "Assets/Resources/Prefabs/Puzzles"});
+        var puzzles = new List<GameObject>();
+
+        var i = 0;
+
+        foreach (string guid in guids)
+        {
+            var puzzle = AssetDatabase.LoadAssetAtPath<GameObject>(AssetDatabase.GUIDToAssetPath(guid));
+            if (puzzle.tag == "Puzzle") {
+                puzzles.Add(puzzle);
+            }
+            i++;
+        }
+
+        Puzzles = puzzles.ToArray();
+    }
+
+    private string PickRandPuzzle()
+    {
+        return Puzzles[Random.Range(0, Puzzles.Length)].name;
     }
 }
