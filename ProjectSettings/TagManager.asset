@@ -9,6 +9,7 @@ TagManager:
   - player2
   - Director
   - Spawner
+  - Puzzle
   layers:
   - Default
   - TransparentFX

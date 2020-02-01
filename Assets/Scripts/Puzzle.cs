@@ -13,6 +13,10 @@ public class Puzzle : MonoBehaviour
     private Director director;
     private Spawner spawner;
 
+    // Are players locked in with teh puzzle
+    public bool p1_locked = false;
+    public bool p2_locked = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,7 +43,7 @@ public class Puzzle : MonoBehaviour
         Assert.IsTrue(Dimensions.Length == 2);
     }
 
-    void Solve()
+    public void Solve()
     {
         Hide();
         PuzzleSolvedEvent.Invoke();
