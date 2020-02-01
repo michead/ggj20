@@ -31,6 +31,7 @@ public class player_movement : MonoBehaviour
             vel1 += new Vector3(1.0f, 0.0f, 0.0f) * Input.GetAxis("Horizontal_p1") * move_speed;
             vel1 += new Vector3(0.0f, 0.0f, 1.0f) * Input.GetAxis("Vertical_p1") * move_speed;
             rb1.velocity = vel1;
+            p1.A = Input.GetAxis("A_p1") > 0;
         }
         // Puzzles
         else
@@ -52,6 +53,7 @@ public class player_movement : MonoBehaviour
             vel2 += new Vector3(1.0f, 0.0f, 0.0f) * Input.GetAxis("Horizontal_p2") * move_speed;
             vel2 += new Vector3(0.0f, 0.0f, 1.0f) * Input.GetAxis("Vertical_p2") * move_speed;
             rb2.velocity = vel2;
+            p2.A = Input.GetAxis("A_p2") > 0;
         }
         // Puzzles
         else

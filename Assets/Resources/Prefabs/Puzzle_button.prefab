@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b47d59af7e72a4c8b7ed7794b0cc15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  decrease_pressure_by: 0
+  decrease_pressure_by: 0.25
 --- !u!114 &1574195982346699489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +125,7 @@ MonoBehaviour:
   PuzzleSolvedEvent:
     m_PersistentCalls:
       m_Calls: []
-  Dimensions: 0000000000000000
+  Dimensions: 0100000001000000
   ShowTimeout: 0.5
   HideTimeout: 1
   p1_locked: 0
@@ -143,7 +143,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 4443352cb2cf34e51b08de31a8dc7a04, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

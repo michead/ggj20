@@ -12,6 +12,7 @@ public class Puzzle : MonoBehaviour
     private Animator animator;
     private Director director;
     private Spawner spawner;
+    private bool isSolved;
 
     // Are players locked in with teh puzzle
     public bool p1_locked = false;
@@ -31,11 +32,7 @@ public class Puzzle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // TODO: Just for testing.
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Solve();
-        }
+
     }
 
     void OnValidate()
@@ -45,8 +42,13 @@ public class Puzzle : MonoBehaviour
 
     public void Solve()
     {
+        if (isSolved) {
+            return;
+        }
+
         Hide();
         PuzzleSolvedEvent.Invoke();
+        isSolved = true;
     }
 
     public void Show() 

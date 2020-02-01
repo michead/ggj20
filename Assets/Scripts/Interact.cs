@@ -20,6 +20,7 @@ public class Interact : MonoBehaviour
             if (pm.p1.A)
             {
                 par.p1_locked = true;
+                pm.p1.is_solving = true;
             }
         }
         if (other.gameObject.name == "Player2")
@@ -27,6 +28,7 @@ public class Interact : MonoBehaviour
             if (pm.p2.A)
             {
                 par.p2_locked = true;
+                pm.p2.is_solving = true;
             }
         }
     }

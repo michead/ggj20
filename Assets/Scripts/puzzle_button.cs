@@ -40,6 +40,10 @@ public class puzzle_button : MonoBehaviour
                 force_tapping1 = true;
                 pressure = Mathf.Clamp01(pressure - decrease_pressure_by);
             }
+            else
+            {
+                force_tapping1 = false;
+            }
         }
         // P2
         if (puzzle.p2_locked)
@@ -53,6 +57,10 @@ public class puzzle_button : MonoBehaviour
             {
                 force_tapping2 = true;
                 pressure = Mathf.Clamp01(pressure - decrease_pressure_by);
+            }
+            else
+            {
+                force_tapping2 = false;
             }
         }
 

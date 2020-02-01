@@ -19,7 +19,7 @@ public class Director : MonoBehaviour
 
     public void SpawnPuzzle()
     {
-        SpawnEvent.Invoke("Puzzle");
+        SpawnEvent.Invoke("Puzzle_button");
     }
 
     public void OnPuzzleSolved()
