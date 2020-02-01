@@ -10,6 +10,7 @@ TagManager:
   - Director
   - Spawner
   - Puzzle
+  - MainMenu
   layers:
   - Default
   - TransparentFX
