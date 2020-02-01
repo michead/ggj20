@@ -219,6 +219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &41024818
 PrefabInstance:
@@ -318,6 +321,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &49909097
 PrefabInstance:
@@ -417,6 +423,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &82207293
 PrefabInstance:
@@ -521,6 +530,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &159462964
 PrefabInstance:
@@ -620,6 +632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &167108551
 PrefabInstance:
@@ -719,6 +734,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &171288650
 PrefabInstance:
@@ -818,6 +836,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &215946041
 PrefabInstance:
@@ -917,6 +938,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &219507211
 PrefabInstance:
@@ -1016,6 +1040,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &232961877
 PrefabInstance:
@@ -1115,6 +1142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &253797017
 PrefabInstance:
@@ -1219,6 +1249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &279545815
 PrefabInstance:
@@ -1318,6 +1351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &280091459
 PrefabInstance:
@@ -1417,6 +1453,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &362497994
 PrefabInstance:
@@ -1516,6 +1555,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &385168641
 PrefabInstance:
@@ -1615,6 +1657,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &385185233
 PrefabInstance:
@@ -1714,6 +1759,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &445099838
 PrefabInstance:
@@ -1813,6 +1861,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1 &447548169
 GameObject:
@@ -1838,7 +1889,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447548169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3570249637384049421}
@@ -1901,7 +1952,7 @@ Transform:
   - {fileID: 1515491358}
   - {fileID: 385168642}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &454436501
 PrefabInstance:
@@ -2001,6 +2052,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &463132805
 PrefabInstance:
@@ -2100,6 +2154,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &466506217
 PrefabInstance:
@@ -2199,6 +2256,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &483828912
 PrefabInstance:
@@ -2298,6 +2358,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &604847736
 PrefabInstance:
@@ -2397,6 +2460,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &761090728
 PrefabInstance:
@@ -2496,6 +2562,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &777607688
 PrefabInstance:
@@ -2595,6 +2664,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &874277888
 PrefabInstance:
@@ -2694,6 +2766,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &883501324
 PrefabInstance:
@@ -2793,6 +2868,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &901177388
 PrefabInstance:
@@ -2892,7 +2970,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
+--- !u!1001 &911095983
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074256, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 398468069629074257, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 398468069629074268, guid: f47f91754aafaf64fbcec30c0177477e,
+        type: 3}
+      propertyPath: m_Name
+      value: Player1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f47f91754aafaf64fbcec30c0177477e, type: 3}
 --- !u!1001 &914366828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2991,6 +3161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1 &915141777
 GameObject:
@@ -3003,6 +3176,7 @@ GameObject:
   - component: {fileID: 915141780}
   - component: {fileID: 915141779}
   - component: {fileID: 915141778}
+  - component: {fileID: 915141781}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3068,13 +3242,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 915141777}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 10, z: -7}
+  m_LocalRotation: {x: 0.3420201, y: 0, z: 0, w: 0.9396927}
+  m_LocalPosition: {x: 0, y: 5, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 40, y: 0, z: 0}
+--- !u!114 &915141781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915141777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1240afc854e80484792ba8c456a6051c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boomMultiplier: 2
 --- !u!1001 &928065651
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3173,6 +3360,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &933191421
 PrefabInstance:
@@ -3272,6 +3462,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1013366653
 PrefabInstance:
@@ -3371,6 +3564,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1023916405
 PrefabInstance:
@@ -3470,6 +3666,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1078711982
 PrefabInstance:
@@ -3569,6 +3768,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1119641124
 PrefabInstance:
@@ -3668,6 +3870,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1224824240
 PrefabInstance:
@@ -3767,6 +3972,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1231725904
 PrefabInstance:
@@ -3866,6 +4074,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1258906331
 PrefabInstance:
@@ -3965,6 +4176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1277039470
 PrefabInstance:
@@ -4064,6 +4278,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1 &1349407541
 GameObject:
@@ -4108,20 +4325,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  PuzzleSolvedEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1968505359}
-        m_MethodName: OnPuzzleSolved
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!4 &1349407543
 Transform:
   m_ObjectHideFlags: 0
@@ -4134,7 +4337,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1355103679
 PrefabInstance:
@@ -4234,6 +4437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1369494337
 PrefabInstance:
@@ -4333,6 +4539,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1375844897
 PrefabInstance:
@@ -4432,6 +4641,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1422283051
 PrefabInstance:
@@ -4531,6 +4743,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1424301669
 PrefabInstance:
@@ -4630,6 +4845,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1513962582
 PrefabInstance:
@@ -4729,6 +4947,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1515491357
 PrefabInstance:
@@ -4828,6 +5049,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1554892040
 PrefabInstance:
@@ -4927,6 +5151,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1622181264
 PrefabInstance:
@@ -5026,6 +5253,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1647977515
 PrefabInstance:
@@ -5125,7 +5355,99 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
+--- !u!1001 &1659116928
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 256772471912246404, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246405, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 256772471912246409, guid: 96b60a0bc0e37b1469825373a7d5a5a0,
+        type: 3}
+      propertyPath: m_Name
+      value: Player2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 96b60a0bc0e37b1469825373a7d5a5a0, type: 3}
 --- !u!1001 &1670761255
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5224,6 +5546,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1703129677
 PrefabInstance:
@@ -5323,6 +5648,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1703142779
 PrefabInstance:
@@ -5427,6 +5755,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1768347649
 PrefabInstance:
@@ -5526,6 +5857,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &1788981308
 PrefabInstance:
@@ -5625,6 +5959,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1 &1968505357
 GameObject:
@@ -5655,7 +5992,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1968505359
 MonoBehaviour:
@@ -5773,6 +6110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &2034179200
 PrefabInstance:
@@ -5872,6 +6212,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &2064991935
 PrefabInstance:
@@ -5971,6 +6314,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1001 &2087427359
 PrefabInstance:
@@ -6070,6 +6416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1 &2097080316
 GameObject:
@@ -6161,7 +6510,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &2140695536
 PrefabInstance:
@@ -6261,6 +6610,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!1 &565002715796119838 stripped
 GameObject:
@@ -6280,6 +6632,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
   Dimensions: 0000000000000000
 --- !u!4 &3570249637384049421 stripped
 Transform:
