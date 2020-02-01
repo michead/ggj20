@@ -36,6 +36,7 @@ public class player_movement : MonoBehaviour
         // Puzzles
         else
         {
+            rb1.velocity = new Vector3(0.0f, 0.0f, 0.0f);
             p1.left = Input.GetAxis("Horizontal_p1") < 0;
             p1.right = Input.GetAxis("Horizontal_p1") > 0;
             p1.up = Input.GetAxis("Horizontal_p1") > 0;
@@ -58,6 +59,7 @@ public class player_movement : MonoBehaviour
         // Puzzles
         else
         {
+            rb2.velocity = new Vector3(0.0f, 0.0f, 0.0f);
             p2.left = Input.GetAxis("Horizontal_p1") < 0;
             p2.right = Input.GetAxis("Horizontal_p1") > 0;
             p2.up = Input.GetAxis("Horizontal_p1") > 0;

@@ -12,7 +12,7 @@ public class Puzzle : MonoBehaviour
     private Animator animator;
     private Director director;
     private Spawner spawner;
-    private bool isSolved;
+    public bool isSolved;
 
     // Are players locked in with teh puzzle
     public bool p1_locked = false;

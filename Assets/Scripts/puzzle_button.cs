@@ -40,7 +40,7 @@ public class puzzle_button : MonoBehaviour
                 force_tapping1 = true;
                 pressure = Mathf.Clamp01(pressure - decrease_pressure_by);
             }
-            else
+            else if (!pm.p1.A)
             {
                 force_tapping1 = false;
             }
@@ -58,7 +58,7 @@ public class puzzle_button : MonoBehaviour
                 force_tapping2 = true;
                 pressure = Mathf.Clamp01(pressure - decrease_pressure_by);
             }
-            else
+            else if (!pm.p1.A)
             {
                 force_tapping2 = false;
             }
@@ -66,6 +66,16 @@ public class puzzle_button : MonoBehaviour
 
         if (pressure <= 0.0f)
         {
+            if (puzzle.p1_locked)
+            {
+                puzzle.p1_locked = false;
+                pm.p1.is_solving = false;
+            }
+            if (puzzle.p2_locked)
+            {
+                puzzle.p2_locked = false;
+                pm.p2.is_solving = false;
+            }
             puzzle.Solve();
         }
     }
