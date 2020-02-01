@@ -11,10 +11,16 @@ public class Spawner : MonoBehaviour
     private const int xSideSize = 9;
     private const int zSideSize = 5;
     private IList<GameObject> slidingTiles;
+    private IList<GameObject> players;
 
     // Start is called before the first frame update
     void Start()
     {
+        players = new List<GameObject> {
+            GameObject.FindGameObjectWithTag("player1"),
+            GameObject.FindGameObjectWithTag("player2"),
+        };
+
         InitializeTiles();
     }
 
@@ -49,11 +55,18 @@ public class Spawner : MonoBehaviour
                 var t = GetTileAt(randX + x, randZ + z);
                 slidingTiles.Add(t);
                 puzzlePosition += t.transform.position;
+
+                if (GetTilesOccupiedByPlayers().Contains(t)) {
+                    // Try again another position as the one computed is occupied.
+                    // FIXME: This leads potentially to a stack overflow.
+                    Spawn(tileId);
+                    return;
+                }
             }
         }
 
         puzzlePosition /= (puzzleComp.Dimensions[0] * puzzleComp.Dimensions[1]);
-        puzzlePosition.y = -1;
+        puzzlePosition.y = -1.5f;
         var puzzle = Instantiate(puzzleType, puzzlePosition, Quaternion.identity);
 
         OpenSliders();
@@ -85,5 +98,27 @@ public class Spawner : MonoBehaviour
     public void OnPuzzleSolved()
     {
         CloseSliders();
+    }
+
+    public IList<GameObject> GetTilesOccupiedByPlayers()
+    {
+        var occupiedTiles = new List<GameObject>();
+
+        foreach (var p in players) {
+            foreach (var t in Tiles) {
+                const float halfSideSize = 0.5f;
+                Rect rect = new Rect(
+                    t.transform.position.x - halfSideSize,
+                    -t.transform.position.y - halfSideSize,
+                    halfSideSize * 2,
+                    halfSideSize * 2);
+
+                if (rect.Contains(new Vector2(p.transform.position.x, p.transform.position.y))) {
+                    occupiedTiles.Add(t);
+                }
+            }
+        }
+
+        return occupiedTiles;
     }
 }
