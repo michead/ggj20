@@ -236,7 +236,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1613,7 +1613,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: d2289e7cc5eac864e8cad02596f15a11, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4289626623
 --- !u!23 &364338280
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4237,7 +4237,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272068489}
   m_LocalRotation: {x: 0.17364816, y: 0, z: 0, w: 0.9848078}
+<<<<<<< HEAD
   m_LocalPosition: {x: 0, y: 2.7, z: -7}
+=======
+  m_LocalPosition: {x: 0, y: 3.5, z: -8}
+>>>>>>> 329d8785efbd4f3308e6d61cee60d8a4d3838ecd
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 915141780}

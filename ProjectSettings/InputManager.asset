@@ -328,16 +328,16 @@ InputManager:
   - serializedVersion: 3
     m_Name: Pause
     descriptiveName: 
-    descriptiveNegativeName: f
+    descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: l
+    positiveButton: e
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: o
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
     snap: 0
     invert: 0
     type: 0
-    axis: 0
+    axis: 2
     joyNum: 0
