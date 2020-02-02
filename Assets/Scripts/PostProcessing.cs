@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PostProcessing : MonoBehaviour
 {
@@ -17,6 +18,26 @@ public class PostProcessing : MonoBehaviour
 
     public void ChromaticAberration()
     {
-        GetComponent<Animator>().Play("ChromaticAberration");
+        StartCoroutine(_ChromaticAberration());
+    }
+
+    private IEnumerator _ChromaticAberration() {
+        var done = false;
+        var isDescending = false;
+
+        while (!done) {
+            var chromaticAberration = GetComponent<PostProcessVolume>().profile.GetSetting<ChromaticAberration>();
+            chromaticAberration.intensity.value = chromaticAberration.intensity + Time.deltaTime * 2 * (isDescending ? -1F : 1F);
+
+            if (chromaticAberration.intensity >= 1f) {
+                isDescending = true;
+            }
+
+            if (chromaticAberration.intensity <= 0 && isDescending) {
+                break;
+            }
+
+            yield return null;
+        }
     }
 }

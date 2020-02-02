@@ -22,7 +22,10 @@ public class Director : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // TODO: Just for testing.
+        // if (Input.GetKeyDown(KeyCode.Space)) {
+        //     OnDestruction();
+        // }
     }
 
     public void SpawnPuzzle()
