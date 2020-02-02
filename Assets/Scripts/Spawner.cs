@@ -66,7 +66,9 @@ public class Spawner : MonoBehaviour
         }
 
         puzzlePosition /= (puzzleComp.Dimensions[0] * puzzleComp.Dimensions[1]);
-        puzzlePosition.y = -5.0f;
+        // TODO: Change offset based on puzzle type.
+        // This is ugly but should work for the demo.
+        puzzlePosition.y = -7.5f;
         var puzzle = Instantiate(puzzleType, puzzlePosition, Quaternion.identity);
 
         OpenSliders();
