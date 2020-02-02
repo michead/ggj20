@@ -16,7 +16,7 @@ public class Director : MonoBehaviour
     void Start()
     {
         CollectAllPuzzles();
-        Invoke("SpawnPuzzle", 1.0f);
+        //Invoke("SpawnPuzzle", 1.0f);
     }
 
     // Update is called once per frame

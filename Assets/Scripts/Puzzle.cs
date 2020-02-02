@@ -21,10 +21,13 @@ public class Puzzle : MonoBehaviour
     // Are players locked in with teh puzzle
     public bool p1_locked = false;
     public bool p2_locked = false;
+    
+    Game_progess gp;
 
     // Start is called before the first frame update
     void Start()
     {
+        gp = GameObject.Find("InputManager").GetComponent<Game_progess>();
         animator = GetComponent<Animator>();
         director = GameObject.FindGameObjectWithTag("Director").GetComponent<Director>();
         spawner = GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>();
@@ -49,6 +52,8 @@ public class Puzzle : MonoBehaviour
         if (isSolved) {
             return;
         }
+
+        gp.On_solved();
 
         Hide();
         PuzzleSolvedEvent.Invoke();

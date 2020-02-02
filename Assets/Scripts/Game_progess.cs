@@ -8,17 +8,26 @@ public class Game_progess : MonoBehaviour
     List<GameObject> mesh_pairs;
     [SerializeField]
     Clock clock;
-    [SerializeField]
-    Spawner sp;
 
     [SerializeField]
     Director dir;
+    [SerializeField]
+    Spawner sp;
 
     float time_till_brake = 22.0f;
     float time_between_brakes = 2.5f; // + random 0 -> 3
+    float time_till_spawn = 3.5f;
+    float time_between_spawns = 0.5f; // + random 0 -> 3
+    float time_between_spawns_slow = 3.0f; // + random 0 -> 4
+    float time_to_add_on_solve = 3.0f;
     List<int> unbroken;
 
     bool all_broken = false;
+
+    public void On_solved()
+    {
+        clock.Add_time(time_to_add_on_solve);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +58,27 @@ public class Game_progess : MonoBehaviour
 
             if (unbroken.Count == 0)
                 all_broken = true;
+        }
+
+
+        // Puzzle spawning
+        time_till_spawn = Mathf.Clamp(time_till_spawn - Time.deltaTime, 0.0f, 9999.0f);
+        if (time_till_spawn <= 0.0f)
+        {
+            if (sp.currently_spawned > 5)
+            {
+                // don't spawn
+            }
+            else if (sp.currently_spawned > 2)
+            {
+                dir.SpawnPuzzle();
+                time_till_spawn = time_between_spawns_slow + Random.value * 4.0f;
+            }
+            else
+            {
+                dir.SpawnPuzzle();
+                time_till_spawn = time_between_spawns + Random.value * 3.0f;
+            }
         }
     }
 }

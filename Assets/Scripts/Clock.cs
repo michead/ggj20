@@ -28,7 +28,7 @@ public class Clock : MonoBehaviour
         tm.text = text;
     }
 
-    void Add_time(float t)
+    public void Add_time(float t)
     {
         time += t;
     }
