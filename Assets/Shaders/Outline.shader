@@ -28,7 +28,7 @@
 
     v2f vert(appdata v)
     {
-        v.vertex.xyz *= _OutlineWidth;
+        v.vertex.xyz = v.vertex.xyz + v.normal.xyz * 0.0001 * _OutlineWidth;
 
         v2f o;
         o.pos = UnityObjectToClipPos(v.vertex);

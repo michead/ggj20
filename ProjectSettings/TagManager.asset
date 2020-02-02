@@ -12,6 +12,8 @@ TagManager:
   - Puzzle
   - MainMenu
   - PostProcessing
+  - IgnoreOutline
+  - SupportsOutline
   layers:
   - Default
   - TransparentFX

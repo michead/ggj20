@@ -72,21 +72,30 @@ public class Puzzle : MonoBehaviour
 
     private void UpdateOutline()
     {
-        var materials = GetComponent<MeshRenderer>().materials;
+        var meshRenderers = gameObject
+            .GetComponentsInChildren<MeshRenderer>()
+            .Where(c => c.gameObject.tag == "SupportsOutline");
 
-        if (p1_locked || p2_locked)
-        {
-            // Outline puzzle if it's being interacted with.
-            if (!materials.Any(m => m.name == OutlineMaterial.name)) {
-                materials[1] = OutlineMaterial;
-                GetComponent<MeshRenderer>().materials = materials;
+        foreach (var meshRenderer in meshRenderers) {
+            var materials = meshRenderer.materials;
+            if (materials.Length < 2) {
+                meshRenderer.materials = new [] { materials[0], null };
             }
-        }
-        else
-        {
-            // Remove outline if puzzle is not locked anymore.
-            // This assumes the materials array has been preset to contain 2 elements.
-            materials[1] = null;
+
+            if (p1_locked || p2_locked)
+            {
+                // Outline puzzle if it's being interacted with.
+                if (!materials.Any(m => m.name == OutlineMaterial.name)) {
+                    materials[1] = OutlineMaterial;
+                    meshRenderer.materials = materials;
+                }
+            }
+            else
+            {
+                // Remove outline if puzzle is not locked anymore.
+                // This assumes the materials array has been preset to contain 2 elements.
+                meshRenderer.materials[1] = null;
+            }
         }
     }
 }
