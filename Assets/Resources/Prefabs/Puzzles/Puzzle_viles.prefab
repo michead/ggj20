@@ -9,9 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5113049773498901413}
+  - component: {fileID: 1013071272195706310}
+  - component: {fileID: -1734970736941213219}
+  - component: {fileID: -2879366899908088134}
+  - component: {fileID: 8509318874106509409}
   m_Layer: 0
   m_Name: Puzzle_viles
-  m_TagString: Untagged
+  m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1091407748078085535}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.008132768, y: 0.05551697, z: -2.247291}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2553840746049291067}
@@ -34,6 +38,72 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1013071272195706310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091407748078085535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ae03ebb22a354647b412700f0d84bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleSolvedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  Dimensions: 0200000001000000
+  ShowTimeout: 0.5
+  HideTimeout: 1
+  OutlineMaterial: {fileID: 0}
+  isSolved: 0
+  p1_locked: 0
+  p2_locked: 0
+--- !u!95 &-1734970736941213219
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091407748078085535}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4443352cb2cf34e51b08de31a8dc7a04, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2879366899908088134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091407748078085535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc1302903bdb440c82b9faae93054c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &8509318874106509409
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091407748078085535}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1380063302641263307
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96,10 +166,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 684da7cfadc22dc4ab483ed92b56f58c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 21.44594
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 684da7cfadc22dc4ab483ed92b56f58c,
         type: 3}
       propertyPath: m_Name
       value: VialsLiquid_2
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 684da7cfadc22dc4ab483ed92b56f58c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Vial2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684da7cfadc22dc4ab483ed92b56f58c, type: 3}
@@ -171,10 +251,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 684da7cfadc22dc4ab483ed92b56f58c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 684da7cfadc22dc4ab483ed92b56f58c,
         type: 3}
       propertyPath: m_Name
       value: VialsLiquid_1
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 684da7cfadc22dc4ab483ed92b56f58c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Vial1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684da7cfadc22dc4ab483ed92b56f58c, type: 3}
@@ -325,6 +415,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: VialsLiquid_0
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 684da7cfadc22dc4ab483ed92b56f58c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Vial0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 684da7cfadc22dc4ab483ed92b56f58c, type: 3}
