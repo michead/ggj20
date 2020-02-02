@@ -82,22 +82,26 @@ public class player_movement : MonoBehaviour {
             p2.Y = Input.GetAxis("Y_p1") > 0;
         }
 
-        if (rb1.velocity.magnitude > 0) {
+        if (rb1.velocity != Vector3.zero) {
             var rot1 = pgo1.transform.rotation;
-            var y = Quaternion.LookRotation(rb1.velocity).y;
-            pgo1.transform.rotation = new Quaternion(rot1.x, y, rot1.z, rot1.w);
+            var rot2 = Quaternion.LookRotation(rb1.velocity);
+            pgo1.transform.rotation = new Quaternion(rot1.x, rot2.y, rot1.z, rot2.w);
         }
 
         pgo1.GetComponentInChildren<Animator>().SetFloat("Speed", Mathf.Min(1, Mathf.Abs(rb1.velocity.magnitude)));
-        Debug.DrawLine(pgo1.transform.position, pgo1.transform.position + rb1.velocity.normalized);
+        Debug.DrawLine(
+            pgo1.transform.position + new Vector3(0, 0.5f, 0),
+            pgo1.transform.position + new Vector3(0, 0.5f, 0) + rb1.velocity.normalized, Color.red);
 
-        if (rb2.velocity.magnitude > 0) {
-            var rot2 = pgo2.transform.rotation;
-            var y = Quaternion.LookRotation(rb2.velocity).y;
-            pgo2.transform.rotation = new Quaternion(rot2.x, y, rot2.z, rot2.w);
+        if (rb2.velocity != Vector3.zero) {
+            var rot1 = pgo2.transform.rotation;
+            var rot2 = Quaternion.LookRotation(rb2.velocity);
+            pgo2.transform.rotation = new Quaternion(rot1.x, rot2.y, rot1.z, rot2.w);
         }
 
         pgo2.GetComponentInChildren<Animator>().SetFloat("Speed", Mathf.Min(1, Mathf.Abs(rb2.velocity.magnitude)));
-        Debug.DrawLine(pgo2.transform.position, pgo2.transform.position + rb2.velocity.normalized);
+        Debug.DrawLine(
+            pgo2.transform.position + new Vector3(0, 0.5f, 0),
+            pgo2.transform.position + new Vector3(0, 0.5f, 0) + rb2.velocity.normalized, Color.red);
     }
 }

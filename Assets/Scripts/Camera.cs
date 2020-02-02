@@ -24,7 +24,7 @@ public class Camera : MonoBehaviour
 
     private void UpdateTransform(bool snap = false)
     {
-        var target = ((player1.transform.position + player2.transform.position) / 2) + Vector3.forward * 2.5f;
+        var target = ((player1.transform.position + player2.transform.position) + new Vector3(0, 2, 0)) / 3;
         var direction = (target - transform.position).normalized;
         var lookAtRotation = Quaternion.LookRotation(direction);
         if (snap)
