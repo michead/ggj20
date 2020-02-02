@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Eniding1.unity
     guid: eb7a21dfa80dd924c88eb3073c7e8f7b
+  - enabled: 1
+    path: Assets/Scenes/Eniding2.unity
+    guid: e655e974538982f49a666ffd27dd6819
   m_configObjects: {}

@@ -46,11 +46,19 @@ public class Game_progess : MonoBehaviour
     {
 
         // Time over
-        if (clock.time <= 0.0f && unbroken.Count >= 23)
+        if (clock.time <= 0.0f)
         {
             wait -= Time.deltaTime;
-            if (wait <= 0.0f)
-                Application.LoadLevel(2);
+            if (unbroken.Count >= 23)
+            {
+                if (wait <= 0.0f)
+                    Application.LoadLevel(2);
+            }
+            else
+            {
+                if (wait <= 0.0f)
+                    Application.LoadLevel(3);
+            }
         }
         else
         {
