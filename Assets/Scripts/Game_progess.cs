@@ -8,6 +8,8 @@ public class Game_progess : MonoBehaviour
     List<GameObject> mesh_pairs;
     [SerializeField]
     Clock clock;
+    [SerializeField]
+    Spawner sp;
 
     [SerializeField]
     Director dir;

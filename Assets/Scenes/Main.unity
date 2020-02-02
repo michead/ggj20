@@ -2587,6 +2587,7 @@ MonoBehaviour:
   - {fileID: 1494196677}
   - {fileID: 198454817}
   clock: {fileID: 1241253196}
+  sp: {fileID: 1968505359}
   dir: {fileID: 1349407542}
 --- !u!1001 &777607688
 PrefabInstance:
@@ -5832,6 +5833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tiles: []
+  currently_spawned: 0
 --- !u!95 &1968505360
 Animator:
   serializedVersion: 3
