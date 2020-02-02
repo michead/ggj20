@@ -108,7 +108,9 @@ public class Puzzle : MonoBehaviour
                 if (meshRenderer.gameObject.tag.Contains("VialContainer")) {
                     meshRenderer.materials[0] = PlasticShiny;
                 } else {
-                    meshRenderer.materials[1] = null;
+                    if (meshRenderer.materials.Length > 1) {
+                        meshRenderer.materials[1] = null;
+                    }
                 }
             }
         }

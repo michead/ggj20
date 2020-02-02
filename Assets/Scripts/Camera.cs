@@ -13,7 +13,7 @@ public class Camera : MonoBehaviour
         player1 = GameObject.FindGameObjectWithTag("player1");
         player2 = GameObject.FindGameObjectWithTag("player2");
 
-        UpdateTransform();
+        UpdateTransform(true);
     }
 
     // Update is called once per frame
@@ -22,11 +22,18 @@ public class Camera : MonoBehaviour
         UpdateTransform();
     }
 
-    private void UpdateTransform()
+    private void UpdateTransform(bool snap = false)
     {
-        var target = (player1.transform.position + player2.transform.position) / 2;
+        var target = ((player1.transform.position + player2.transform.position) / 2) + Vector3.forward * 2.5f;
         var direction = (target - transform.position).normalized;
         var lookAtRotation = Quaternion.LookRotation(direction);
-        transform.rotation = Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime * boomMultiplier);
+        if (snap)
+        {
+            transform.rotation = lookAtRotation;
+        }
+        else
+        {
+            transform.rotation = Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime * boomMultiplier);
+        }
     }
 }

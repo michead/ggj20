@@ -93,7 +93,7 @@ public class player_movement : MonoBehaviour {
 
         if (rb2.velocity.magnitude > 0) {
             var rot2 = pgo2.transform.rotation;
-            var y = Quaternion.LookRotation(rb1.velocity).y;
+            var y = Quaternion.LookRotation(rb2.velocity).y;
             pgo2.transform.rotation = new Quaternion(rot2.x, y, rot2.z, rot2.w);
         }
 
