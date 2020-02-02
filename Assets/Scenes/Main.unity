@@ -236,7 +236,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1565,7 +1565,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: d2289e7cc5eac864e8cad02596f15a11, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4289626623
 --- !u!23 &364338280
 MeshRenderer:
   m_ObjectHideFlags: 0
