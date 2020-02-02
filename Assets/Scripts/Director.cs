@@ -63,7 +63,7 @@ public class Director : MonoBehaviour
         return Puzzles[Random.Range(0, Puzzles.Length)].name;
     }
 
-    private void OnDestruction() {
+    public void OnDestruction() {
         Camera.GetComponent<CameraShake>().Shake(1f, 0.1f);
         PostProcessing.GetComponent<PostProcessing>().ChromaticAberration();
     }

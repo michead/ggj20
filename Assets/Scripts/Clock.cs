@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Clock : MonoBehaviour
 {
-    float time = 20.0f;
+    public float time = 20.0f;
     [SerializeField]
     TextMesh tm;
 
