@@ -36,7 +36,7 @@ public class Director : MonoBehaviour
 
     public void OnPuzzleSolved()
     {
-        Invoke("SpawnPuzzle", 1.0f);
+        //Invoke("SpawnPuzzle", 1.0f);
     }
 
     private void CollectAllPuzzles()
