@@ -3,7 +3,57 @@ guid: 4247e7efcaa0ce54487d3381f98cf97b
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: a2a8a5f73837a44b59e86134d77bdd8b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: f4c8f89658c1c4a379debff063a21cd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: a6557c5b5841e42d6a660075467505a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: f21b8883311d54068afe99ee1d9df0c7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: b383d1e5612084721a305c6361b03fa6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal Dark
+    second: {fileID: 2100000, guid: 9dbd609e266e246e2ab66763693cfda2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: b7a80a727a9c04ac089eaac25d197b6c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic Red.001
+    second: {fileID: 2100000, guid: 8762aee247cc546d7b95756dd2c58898, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic Red.002
+    second: {fileID: 2100000, guid: 84d2943a44b94418e88b521ef2767911, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plastic Shiny
+    second: {fileID: 2100000, guid: 905371f43ff564caaade6d4f4096e4b1, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
