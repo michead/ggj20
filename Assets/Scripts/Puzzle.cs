@@ -81,7 +81,7 @@ public class Puzzle : MonoBehaviour
 
         foreach (var meshRenderer in meshRenderers) {
             meshRenderer.materials = new List<Material>(meshRenderer.materials).ToArray();
-            var materials = new Material[meshRenderer.materials.Length];
+            var materials = new Material[2];
 
             for (var i = 0; i < meshRenderer.materials.Length; i++) {
                 materials[i] = meshRenderer.materials[i];
