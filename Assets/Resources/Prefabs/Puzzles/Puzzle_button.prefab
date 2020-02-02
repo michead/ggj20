@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: -306039799773178377}
   m_Layer: 0
   m_Name: Puzzle_button
-  m_TagString: Puzzle
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -263,6 +263,7 @@ MonoBehaviour:
   ShowTimeout: 0.5
   HideTimeout: 1
   OutlineMaterial: {fileID: 2100000, guid: 83eb809dd26e146b78751fce5cb6b2fc, type: 2}
+  PlasticShiny: {fileID: 0}
   isSolved: 0
   p1_locked: 0
   p2_locked: 0

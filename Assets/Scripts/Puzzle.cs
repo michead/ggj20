@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -62,12 +63,14 @@ public class Puzzle : MonoBehaviour
 
     public void Show() 
     {
-        animator.Play("Show");
+        StartCoroutine(_Show());
     }
 
     public void Hide()
     {
-        animator.Play("Hide");
+        StartCoroutine(_Hide());
+
+
         Destroy(gameObject, HideTimeout);
     }
 
@@ -118,6 +121,42 @@ public class Puzzle : MonoBehaviour
                     }
                 }
             }
+        }
+    }
+
+    private IEnumerator _Show() {
+        var originalLocation = transform.position;
+        var targetLocation = new Vector3(originalLocation.x, 0, originalLocation.z);
+        var elapsed = 0f;
+
+        while (true) {
+            transform.position = Vector3.Lerp(transform.position, targetLocation, Time.deltaTime * 3);
+
+            if (elapsed > 2f) {
+                transform.position = targetLocation;
+                break;
+            }
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
+    }
+
+    private IEnumerator _Hide() {
+        var originalLocation = transform.position;
+        var targetLocation = transform.position - transform.up * 4f;
+        var elapsed = 0f;
+
+        while (true) {
+            transform.position = Vector3.Lerp(transform.position, targetLocation, Time.deltaTime * 1.5f);
+
+            if (elapsed > HideTimeout) {
+                transform.position = targetLocation;
+                break;
+            }
+            elapsed += Time.deltaTime;
+
+            yield return null;
         }
     }
 }

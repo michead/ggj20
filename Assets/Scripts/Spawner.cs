@@ -106,7 +106,6 @@ public class Spawner : MonoBehaviour
         CloseSliders();
 
         currently_spawned--;
-    
     }
 
     public IList<GameObject> GetTilesOccupiedByPuzzles()
@@ -116,12 +115,13 @@ public class Spawner : MonoBehaviour
 
         foreach (var p in puzzles) {
             foreach (var t in Tiles) {
-                const float halfSideSize = 0.5f;
+                var xHalf = p.GetComponent<Puzzle>().Dimensions[0] * 0.5f;
+                var yHalf = p.GetComponent<Puzzle>().Dimensions[1] * 0.5f;
                 Rect rect = new Rect(
-                    t.transform.position.x - halfSideSize,
-                    -t.transform.position.y - halfSideSize,
-                    halfSideSize * 2,
-                    halfSideSize * 2);
+                    t.transform.position.x - xHalf,
+                    -t.transform.position.y - yHalf,
+                    xHalf * 2,
+                    yHalf * 2);
 
                 if (rect.Contains(new Vector2(p.transform.position.x, p.transform.position.y))) {
                     occupiedTiles.Add(t);

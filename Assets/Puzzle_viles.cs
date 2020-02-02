@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Linq;
+using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
@@ -32,18 +33,19 @@ public class Puzzle_viles : MonoBehaviour
         }
 
         vials = new List<GameObject>{
-            GameObject.FindGameObjectWithTag("Vial0"),
-            GameObject.FindGameObjectWithTag("Vial1"),
-            GameObject.FindGameObjectWithTag("Vial2"),
+            GameObject.FindGameObjectsWithTag("Vial0").Where(v => v.transform.IsChildOf(transform)).First(),
+            GameObject.FindGameObjectsWithTag("Vial1").Where(v => v.transform.IsChildOf(transform)).First(),
+            GameObject.FindGameObjectsWithTag("Vial2").Where(v => v.transform.IsChildOf(transform)).First(),
         };
 
         vialContainers = new List<GameObject>{
-            GameObject.FindGameObjectWithTag("VialContainer0"),
-            GameObject.FindGameObjectWithTag("VialContainer1"),
-            GameObject.FindGameObjectWithTag("VialContainer2"),
+            GameObject.FindGameObjectsWithTag("VialContainer0").Where(v => v.transform.IsChildOf(transform)).First(),
+            GameObject.FindGameObjectsWithTag("VialContainer1").Where(v => v.transform.IsChildOf(transform)).First(),
+            GameObject.FindGameObjectsWithTag("VialContainer2").Where(v => v.transform.IsChildOf(transform)).First(),
         };
 
         UpdateMesh();
+        Debug.Log($"Values: {values[0]}, {values[1]}, {values[2]}");
     }
 
     // Update is called once per frame
@@ -126,11 +128,18 @@ public class Puzzle_viles : MonoBehaviour
             }
         }
 
-        if (!pm.p1.left) {
+        if (!puzzle.p1_locked && !pm.p1.left) {
+            _left = false;
+            _right = false;
+        }
+
+        if (puzzle.p1_locked && !pm.p1.left ||
+            puzzle.p2_locked && !pm.p2.left) {
             _left = false;
         }
 
-        if (!pm.p1.right) {
+        if (puzzle.p1_locked && !pm.p1.right ||
+            puzzle.p2_locked && !pm.p2.right) {
             _right = false;
         }
     }
@@ -153,41 +162,56 @@ public class Puzzle_viles : MonoBehaviour
             puzzle.p2_locked = false;
             pm.p1.is_solving = false;
             pm.p2.is_solving = false;
-            puzzle.Solve();
+
+            Invoke("Solve", 0.5f);
         }
     }
 
     void UpdateMesh()
     {
-        StartCoroutine(_UpdateMesh());
-    }
+        // StartCoroutine(_UpdateMesh());
 
-    private  IEnumerator _UpdateMesh()
-    {
-        var elapsed = 0f;
         var original0 = vials[0].transform.localScale.z;
         var original1 = vials[1].transform.localScale.z;
         var original2 = vials[2].transform.localScale.z;
-        var startTime = Time.time;
 
-        while (elapsed < 0.5f)
-        {
-            var scale0 = 20 + (values[0] * 0.5f);
-            var scale1 = 20 + (values[1] * 0.5f);
-            var scale2 = 20 + (values[2] * 0.5f);
+        var scale0 = 20 + (values[0] * 0.5f);
+        var scale1 = 20 + (values[1] * 0.5f);
+        var scale2 = 20 + (values[2] * 0.5f);
 
-            float t = Time.time - startTime;
-            var target0 = Mathf.SmoothStep(original0, scale0, t);
-            var target1 = Mathf.SmoothStep(original1, scale1, t);
-            var target2 = Mathf.SmoothStep(original2, scale2, t);
-
-            vials[0].transform.localScale = new Vector3(vials[0].transform.localScale.x, vials[0].transform.localScale.y, target0);
-            vials[1].transform.localScale = new Vector3(vials[1].transform.localScale.x, vials[1].transform.localScale.y, target1);
-            vials[2].transform.localScale = new Vector3(vials[2].transform.localScale.x, vials[2].transform.localScale.y, target2);
-
-            yield return null;
-        }
+        vials[0].transform.localScale = new Vector3(vials[0].transform.localScale.x, vials[0].transform.localScale.y, scale0);
+        vials[1].transform.localScale = new Vector3(vials[1].transform.localScale.x, vials[1].transform.localScale.y, scale1);
+        vials[2].transform.localScale = new Vector3(vials[2].transform.localScale.x, vials[2].transform.localScale.y, scale2);
     }
+
+    // private  IEnumerator _UpdateMesh()
+    // {
+        // var elapsed = 0f;
+        // var original0 = vials[0].transform.localScale.z;
+        // var original1 = vials[1].transform.localScale.z;
+        // var original2 = vials[2].transform.localScale.z;
+        // var startTime = Time.time;
+
+        // var scale0 = 20 + (values[0] * 0.5f);
+        // var scale1 = 20 + (values[1] * 0.5f);
+        // var scale2 = 20 + (values[2] * 0.5f);
+
+        // Debug.Log($"Values: {values[0]}, {values[1]}, {values[2]}");
+
+        // while (elapsed < 0.5f)
+        // {
+        //     float t = Time.time - startTime;
+        //     var target0 = Mathf.SmoothStep(original0, scale0, t);
+        //     var target1 = Mathf.SmoothStep(original1, scale1, t);
+        //     var target2 = Mathf.SmoothStep(original2, scale2, t);
+
+        //     vials[0].transform.localScale = new Vector3(vials[0].transform.localScale.x, vials[0].transform.localScale.y, target0);
+        //     vials[1].transform.localScale = new Vector3(vials[1].transform.localScale.x, vials[1].transform.localScale.y, target1);
+        //     vials[2].transform.localScale = new Vector3(vials[2].transform.localScale.x, vials[2].transform.localScale.y, target2);
+
+        //     yield return null;
+        // }
+    // }
 
     private int[] RandomizeValues() {
         var a = Random.Range(0, 90);
@@ -201,5 +225,9 @@ public class Puzzle_viles : MonoBehaviour
             Mathf.Abs(values[0] - values[1]) < epsilon &&
             Mathf.Abs(values[0] - values[2]) < epsilon
         );
+    }
+
+    public void Solve() {
+        puzzle.Solve();
     }
 }

@@ -65,7 +65,7 @@ public class Game_progess : MonoBehaviour
         time_till_spawn = Mathf.Clamp(time_till_spawn - Time.deltaTime, 0.0f, 9999.0f);
         if (time_till_spawn <= 0.0f)
         {
-            if (sp.currently_spawned > 5)
+            if (sp.currently_spawned > 0)
             {
                 // don't spawn
             }
