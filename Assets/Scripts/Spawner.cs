@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
     [ReadOnly]
     public GameObject[] Tiles;
 
+    public int currently_spawned = 0;
+
     private const int xSideSize = 9;
     private const int zSideSize = 5;
     private IList<GameObject> slidingTiles;
@@ -40,6 +42,8 @@ public class Spawner : MonoBehaviour
 
     public void Spawn(string tileId)
     {
+        currently_spawned++;
+
         var puzzleType = Resources.Load($"Prefabs/Puzzles/{tileId}") as GameObject;
         var puzzleComp = puzzleType.GetComponent<Puzzle>();
 
@@ -100,6 +104,8 @@ public class Spawner : MonoBehaviour
     public void OnPuzzleSolved()
     {
         CloseSliders();
+
+        currently_spawned--;
     }
 
     public IList<GameObject> GetTilesOccupiedByPlayers()
