@@ -60,7 +60,7 @@ public class Spawner : MonoBehaviour
                 slidingTiles.Add(t);
                 puzzlePosition += t.transform.position;
 
-                if (GetTilesOccupiedByPlayers().Contains(t)) {
+                if (GetTilesOccupiedByPlayers().Contains(t) || GetTilesOccupiedByPuzzles().Contains(t)) {
                     // Try again another position as the one computed is occupied.
                     // FIXME: This leads potentially to a stack overflow.
                     Spawn(tileId);
@@ -106,6 +106,30 @@ public class Spawner : MonoBehaviour
         CloseSliders();
 
         currently_spawned--;
+    
+    }
+
+    public IList<GameObject> GetTilesOccupiedByPuzzles()
+    {
+        var occupiedTiles = new List<GameObject>();
+        var puzzles = GameObject.FindGameObjectsWithTag("Puzzle");
+
+        foreach (var p in puzzles) {
+            foreach (var t in Tiles) {
+                const float halfSideSize = 0.5f;
+                Rect rect = new Rect(
+                    t.transform.position.x - halfSideSize,
+                    -t.transform.position.y - halfSideSize,
+                    halfSideSize * 2,
+                    halfSideSize * 2);
+
+                if (rect.Contains(new Vector2(p.transform.position.x, p.transform.position.y))) {
+                    occupiedTiles.Add(t);
+                }
+            }
+        }
+
+        return occupiedTiles;
     }
 
     public IList<GameObject> GetTilesOccupiedByPlayers()
