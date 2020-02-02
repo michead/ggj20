@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Assertions;
 using UnityEngine.Events;
@@ -10,6 +11,7 @@ public class Puzzle : MonoBehaviour
     public float ShowTimeout = 0.5f;
     public float HideTimeout = 1.0f;
     public Material OutlineMaterial;
+    public Material PlasticShiny;
 
     private Animator animator;
     private Director director;
@@ -74,27 +76,40 @@ public class Puzzle : MonoBehaviour
     {
         var meshRenderers = gameObject
             .GetComponentsInChildren<MeshRenderer>()
-            .Where(c => c.gameObject.tag == "SupportsOutline");
+            .Where(c => c.gameObject.tag.Contains("SupportsOutline"))
+            .ToList();
 
         foreach (var meshRenderer in meshRenderers) {
-            var materials = meshRenderer.materials;
-            if (materials.Length < 2) {
-                meshRenderer.materials = new [] { materials[0], null };
+            meshRenderer.materials = new List<Material>(meshRenderer.materials).ToArray();
+            var materials = new Material[meshRenderer.materials.Length];
+
+            for (var i = 0; i < meshRenderer.materials.Length; i++) {
+                materials[i] = meshRenderer.materials[i];
             }
 
             if (p1_locked || p2_locked)
             {
                 // Outline puzzle if it's being interacted with.
-                if (!materials.Any(m => m.name == OutlineMaterial.name)) {
-                    materials[1] = OutlineMaterial;
-                    meshRenderer.materials = materials;
+                if (!materials.Any(m => m?.name == OutlineMaterial.name)) {
+                    
+                    if (meshRenderer.tag.Contains("VialContainer")) {
+                        materials[0] = new Material(OutlineMaterial);
+                        meshRenderer.materials = materials;
+                    } else {
+                        materials[1] = new Material(OutlineMaterial);
+                        meshRenderer.materials = materials;
+                    } 
                 }
             }
             else
             {
                 // Remove outline if puzzle is not locked anymore.
                 // This assumes the materials array has been preset to contain 2 elements.
-                meshRenderer.materials[1] = null;
+                if (meshRenderer.gameObject.tag.Contains("VialContainer")) {
+                    meshRenderer.materials[0] = PlasticShiny;
+                } else {
+                    meshRenderer.materials[1] = null;
+                }
             }
         }
     }

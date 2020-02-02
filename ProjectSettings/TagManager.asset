@@ -17,6 +17,12 @@ TagManager:
   - Vial0
   - Vial1
   - Vial2
+  - VialContainer0
+  - VialContainer1
+  - VialContainer2
+  - VialContainer0 SupportsOutline
+  - VialContainer1 SupportsOutline
+  - VialContainer2 SupportsOutline
   layers:
   - Default
   - TransparentFX
