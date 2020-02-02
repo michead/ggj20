@@ -53,6 +53,7 @@ MonoBehaviour:
   ShowTimeout: 0.5
   HideTimeout: 1
   OutlineMaterial: {fileID: 0}
+  PlasticShiny: {fileID: 0}
   isSolved: 0
   p1_locked: 0
   p2_locked: 0
