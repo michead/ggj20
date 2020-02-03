@@ -4373,7 +4373,11 @@ MonoBehaviour:
         m_CallState: 2
   Camera: {fileID: 915141777}
   PostProcessing: {fileID: 878475560}
-  Puzzles: []
+  Puzzles:
+  - {fileID: 859643679899966909, guid: e4fcb52a00d2d2f43882535d6057fb3d, type: 3}
+  - {fileID: 6278830218713563213, guid: bf9a369ebe7af4e3c878f12c8c9ea22f, type: 3}
+  - {fileID: 8748867623486851128, guid: 3120401b5a09c9346b649737777ebac6, type: 3}
+  - {fileID: 1091407748078085535, guid: 9e8dab82b19af4ee8a691e70431d8800, type: 3}
 --- !u!4 &1349407543
 Transform:
   m_ObjectHideFlags: 0
@@ -6142,6 +6146,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tiles: []
   currently_spawned: 0
+  Puzzles: []
 --- !u!95 &1968505360
 Animator:
   serializedVersion: 3

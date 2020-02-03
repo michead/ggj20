@@ -15,6 +15,8 @@ public class Spawner : MonoBehaviour
     private IList<GameObject> slidingTiles;
     private IList<GameObject> players;
 
+    public GameObject[] Puzzles;
+
     // Start is called before the first frame update
     void Start()
     {
